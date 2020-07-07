@@ -23,31 +23,30 @@ using namespace std;
 // Outputs a sequence of moves for transferring n disks
 // from the start peg to the finish peg, using the spare
 // peg as a temporary resting spot.
-void moveTower(int n, char start, char finish, char spare);
+void move_tower(int n, char start, char finish, char spare);
 
 // Writes a line of output.
-void printMove(char, char);
+void print_move(char, char);
 
 int main() {
-    int numDisks;
+    int num_disks;
     cout << "How many disks are on the starting peg? ";
-    cin >> numDisks;
-	moveTower(numDisks, 'A', 'B', 'C');
+    cin >> num_disks;
+	move_tower(num_disks, 'A', 'B', 'C');
 	return 0;
 }
 
 void moveTower(int n, char start, char finish, char spare) {
     if (n == 1)
-        printMove(start, finish);
+        print_move(start, finish);
     else {
-        moveTower(n-1, start, spare, finish);
-        printMove(start, finish);
-        moveTower(n-1, spare, finish, start);
+        move_tower(n-1, start, spare, finish);
+        print_move(start, finish);
+        move_tower(n-1, spare, finish, start);
     }
 }
 
-void printMove(char start, char finish) {
-    static int move_num = 0;
-    cout << setw(2) << ++move_num << ". " << start << " -> "
-         << finish << endl;
+void print_move(char start, char finish) {
+    static int n = 0; // move number
+    cout << setw(2) << ++n << ". " << start << " -> " << finish << endl;
 }

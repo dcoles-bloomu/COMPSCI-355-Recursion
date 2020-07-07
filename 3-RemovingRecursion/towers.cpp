@@ -65,7 +65,6 @@ void rec_towers1(int n, char start, char finish, char spare) {
     }
 }
 
-
 // tail recursion replaced with a loop
 void rec_towers2(int n, char start, char finish, char spare) {
     while (n > 1) {
@@ -80,7 +79,6 @@ void rec_towers2(int n, char start, char finish, char spare) {
     }
     print(start, finish);
 }
-
 
 // replace loop with GOTOs
 void rec_towers3(int n, char start, char finish, char spare) {
