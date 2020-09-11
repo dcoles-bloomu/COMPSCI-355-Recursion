@@ -36,7 +36,7 @@ int main() {
 	return 0;
 }
 
-void moveTower(int n, char start, char finish, char spare) {
+void move_tower(int n, char start, char finish, char spare) {
     if (n == 1)
         print_move(start, finish);
     else {

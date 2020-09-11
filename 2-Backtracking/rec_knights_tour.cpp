@@ -62,10 +62,11 @@ void tour(Board& board, int r, int c, int n) {
     numberOfCalls++;
 
     board(r, c) = n; // place n-th knight on the board
+    // board.operator()(r, c) = n;
 
     if (n == board.row_count() * board.col_count()) {
         cout << "Knight's tour:\n" << endl;
-        cout << board << endl;
+        cout << board << endl; // operator<<(cout, board).operator<<(endl);
         cout << numberOfCalls << " recursive calls." << endl;
         exit(0);  // Terminate the program.
     }

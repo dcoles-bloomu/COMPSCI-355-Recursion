@@ -49,6 +49,6 @@ void rec_print_subsets(char set[], int size, string subset) {
         cout << subset << endl;
         return;
     }
-    rec_print_subsets(set, size, subset + '.'); // exclude i-th item in array
     rec_print_subsets(set, size, subset + set[pos]); // include i-th item in array
+    rec_print_subsets(set, size, subset + '.'); // exclude i-th item in array
 }
