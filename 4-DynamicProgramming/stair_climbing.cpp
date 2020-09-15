@@ -10,12 +10,12 @@
  * Execution snapshots: 
  *
  *      How many steps? 5
- *      Number of ways to reach the top (DP): 13
- *      Number of ways to reach the top (RE): 13
+ *      Number of ways to reach the top (DP): 8
+ *      Number of ways to reach the top (RE): 8
  *
  *      How many steps? 25
- *      Number of ways to reach the top (DP): 196418
- *      Number of ways to reach the top (RE): 196418
+ *      Number of ways to reach the top (DP): 121393
+ *      Number of ways to reach the top (RE): 121393
  *
  * Try input 40 to observe a difference in execution time.
  *
